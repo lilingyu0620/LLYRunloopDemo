@@ -26,7 +26,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Runloop";
-    self.dataSourceArray = @[@"Cusotm Input Source && Observer && Timer",@"Mach Port Input Source && Observer && Timer",@"Custom Mode"];
+    self.dataSourceArray = @[@"Cusotm Input Source && Observer && Timer",@"Mach Port Input Source && Observer && Timer",@"Custom Mode && Block"];
     
     [self.view addSubview:self.mTableView];
     

@@ -26,6 +26,11 @@ static NSString *kCustomRunLoopMode = @"LLYCustomRunLoopMode";
     NSTimer *timer = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(wakeupRunloop) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:kCustomRunLoopMode];
     
+    //add block
+//    CFRunLoopPerformBlock(CFRunLoopGetCurrent(), (__bridge CFTypeRef)(kCustomRunLoopMode), ^{
+//        NSLog(@"add block");
+//    });
+    
     NSLog(@"runloop = %@",[NSRunLoop currentRunLoop]);
     
     [[NSRunLoop currentRunLoop] runMode:kCustomRunLoopMode beforeDate:[NSDate distantFuture]];
@@ -35,6 +40,12 @@ static NSString *kCustomRunLoopMode = @"LLYCustomRunLoopMode";
 - (void)wakeupRunloop{
     
     NSLog(@"wakeupRunloop");
+    
+    //add block
+//    CFRunLoopPerformBlock(CFRunLoopGetCurrent(), (__bridge CFTypeRef)(kCustomRunLoopMode), ^{
+//        NSLog(@"add block");
+//    });
+
     
 }
 
